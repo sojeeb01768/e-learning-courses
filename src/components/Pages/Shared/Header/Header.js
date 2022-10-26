@@ -3,13 +3,14 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
+import { Link } from 'react-router-dom';
 
 
 const Header = () => {
     return (
-        <Navbar className='py-3 mb-4' collapseOnSelect expand="lg" bg="dark" variant="dark">
+        <Navbar className='py-2 mb-4' collapseOnSelect expand="lg" bg="dark" variant="dark">
             <Container>
-                <Navbar.Brand href="/">Code Scholar</Navbar.Brand>
+                <Navbar.Brand><Link className='text-decoration-none fs-1 fw-semibold' to='/'>Code Scholar</Link></Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="me-auto">
@@ -18,6 +19,7 @@ const Header = () => {
                     </Nav>
                     <Nav>
                         <Nav.Link href="#deets">Blog</Nav.Link>
+                        <Nav.Link href="#deets">Register</Nav.Link>
                         <Nav.Link eventKey={2} href="#memes">
                             Login
                         </Nav.Link>
