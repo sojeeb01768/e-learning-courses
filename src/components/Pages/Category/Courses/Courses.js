@@ -34,7 +34,7 @@ const Courses = () => {
                     <p className='border bg-info text-center py-2 text-light w-25 rounded'>
                         Course Fee: {price} TK
                     </p>
-                    <button className='bg-info text-light rounded border py-2 fs-5 fw-semibold'>
+                    <button className=' bg-info text-light rounded border py-2 fs-5 fw-semibold'>
                         Puchase Now
                     </button>
                 </div>
