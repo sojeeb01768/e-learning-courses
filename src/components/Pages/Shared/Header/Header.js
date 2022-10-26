@@ -6,13 +6,21 @@ import Navbar from 'react-bootstrap/Navbar';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../../../contexts/AuthProvider/AuthProvider';
 import Button from 'react-bootstrap/Button';
-import { FaUserAlt, FaUserCircle } from 'react-icons/fa';
+import { FaUserAlt } from 'react-icons/fa';
 import { Image } from 'react-bootstrap';
 
 
 
 const Header = () => {
-    const { user } = useContext(AuthContext)
+    const { user, logOut } = useContext(AuthContext)
+
+    const handleLogOut =() =>{
+        logOut()
+        .then(result => {
+            
+        })
+        .catch(error => console.error(error))
+    }
 
 
     return (
@@ -36,7 +44,7 @@ const Header = () => {
                                 user?.uid ?
                                     <>
                                         <span>{user?.displayName}</span>
-                                        <Button className='ms-2' variant="outline-danger">Logout</Button>
+                                        <Button onClick={handleLogOut} className='ms-2' variant="outline-danger">Logout</Button>
                                     </>
                                     :
 
@@ -50,7 +58,7 @@ const Header = () => {
                         <Nav.Link>
                             {
                                 user?.photoURL ?
-                                    <Image style={{ height: '40px' }} roundedCircle src={user.photoURL}></Image>
+                                    <Image style={{ height: '40px' }} roundedCircle src={user?.photoURL}></Image>
                                     : 
                                     <FaUserAlt className='mt-2'></FaUserAlt>
                             }

@@ -1,15 +1,17 @@
 import React from 'react';
 import { useLoaderData } from 'react-router-dom';
 import Card from 'react-bootstrap/Card';
-import { Link } from 'react-router-dom';
 import { FaRegEye, FaStar } from "react-icons/fa";
 
 const Courses = () => {
     const courses = useLoaderData();
-    const { title, image_url, tutor, total_view, price, details, rating } = courses;
+    const { name, title, image_url, tutor, total_view, price, details, rating } = courses;
     console.log(courses);
     return (
-        <Card className='mb-5 shadow'>
+            <div>
+
+                <h2 className='text-center my-2'>{name}</h2>
+                <Card className='mb-5 shadow'>
             <Card.Header className='d-flex justify-content-evenly align-items-center' >
                 <div className='fs-5 fw-semibold'>
                     Instructor: {tutor.name}
@@ -40,6 +42,9 @@ const Courses = () => {
                 </div>
             </Card.Body>
         </Card>
+            </div>
+
+        
     );
 };
 
