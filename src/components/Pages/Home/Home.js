@@ -7,11 +7,11 @@ const Home = () => {
 
     return (
         <div>
-            
+
             {
-                courses.map(course=> <CourseCard
-                key={course._id}
-                course={course}
+                courses.map(course => <CourseCard
+                    key={course._id}
+                    course={course}
                 ></CourseCard>)
             }
         </div>
