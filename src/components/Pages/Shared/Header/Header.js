@@ -9,8 +9,11 @@ import Button from 'react-bootstrap/Button';
 import { FaUserAlt } from 'react-icons/fa';
 import { Image } from 'react-bootstrap';
 
-// import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
-// import Tooltip from 'react-bootstrap/Tooltip';
+import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
+import Tooltip from 'react-bootstrap/Tooltip';
+
+import BootstrapSwitchButton from 'bootstrap-switch-button-react'
+
 
 
 
@@ -26,11 +29,11 @@ const Header = () => {
     }
 
 
-    // const renderTooltip = (props) => (
-    //     <Tooltip id="button-tooltip" {...props}>
-    //         Simple tooltip
-    //     </Tooltip>
-    // );
+    const renderTooltip = (props) => (
+        <Tooltip id="button-tooltip" {...props}>
+            {user.displayName}
+        </Tooltip>
+    );
 
 
     return (
@@ -53,7 +56,7 @@ const Header = () => {
 
                                 user?.uid ?
                                     <>
-                                        <span>{user?.displayName}</span>
+                                        {/* <span>{user?.displayName}</span> */}
                                         <Button onClick={handleLogOut} className='ms-2' variant="outline-danger">Logout</Button>
                                     </>
                                     :
@@ -68,12 +71,40 @@ const Header = () => {
                             {
                                 user?.photoURL ?
 
-                                    
-                                    <Image style={{ height: '40px' }} roundedCircle src={user?.photoURL}></Image>
+
+                                    <>
+                                        <OverlayTrigger
+                                            placement="right"
+                                            delay={{ show: 250, hide: 400 }}
+                                            overlay={renderTooltip}
+                                        >
+                                            <Image style={{ height: '40px' }} roundedCircle src={user?.photoURL}></Image>
+                                        </OverlayTrigger>
+
+
+
+                                    </>
                                     :
-                                    <FaUserAlt className='mt-2'></FaUserAlt>
+
+                                    <>
+                                        <OverlayTrigger
+                                            placement="right"
+                                            delay={{ show: 250, hide: 400 }}
+                                            overlay={renderTooltip}
+                                        >
+
+                                            <FaUserAlt className='mt-2'></FaUserAlt>
+                                        </OverlayTrigger>
+
+
+                                    </>
+
                             }
                         </Nav.Link>
+                        <BootstrapSwitchButton checked={true} onstyle="outline-primary" offstyle="outline-secondary"/>
+
+
+
                     </Nav>
                 </Navbar.Collapse>
             </Container>

@@ -18,40 +18,45 @@ export const routes = createBrowserRouter([
             {
                 path: '/',
                 element: <Home></Home>,
-                loader: ()=> fetch('http://localhost:5000/courses')
+                loader: () => fetch('http://localhost:5000/courses')
             },
             {
                 path: '/category/:id',
                 element: <Category></Category>,
-                loader: ({params})=> fetch(`http://localhost:5000/category/${params.id}`)
+                loader: ({ params }) => fetch(`http://localhost:5000/category/${params.id}`)
             },
             {
                 path: '/courses/:id',
-                element:<Courses></Courses>,
-                loader: ({params}) => fetch(`http://localhost:5000/courses/${params.id}`)
+                element: <Courses></Courses>,
+                loader: ({ params }) => fetch(`http://localhost:5000/courses/${params.id}`)
             },
             {
-                path:'/blog',
+                path: '/blog',
                 element: <Blog></Blog>
             },
             {
-                path:'/login',
-                element:<Login></Login>
+                path: '/login',
+                element: <Login></Login>
             },
             {
-                path:'/register',
+                path: '/register',
                 element: <Register></Register>
             },
             {
-                path:'/faq',
-                element:<Faq></Faq>
+                path: '/faq',
+                element: <Faq></Faq>
             },
             {
-                path:'/accesscard',
-                element: <PrivateRoute><PremiumAccesCard></PremiumAccesCard></PrivateRoute>
+                path: '/checkout/:id',
+                element: <PrivateRoute><PremiumAccesCard></PremiumAccesCard></PrivateRoute>,
+                loader: ({ params }) => fetch(`http://localhost:5000/courses/${params.id}`)
 
             }
-            
+
         ]
+    },
+    {
+        path: '*',
+        element: <div>Page Not Found. Error 404</div>
     }
 ])
