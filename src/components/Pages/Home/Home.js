@@ -7,7 +7,7 @@ const Home = () => {
 
     return (
         <div>
-            <h2>Programming Courses Home: {courses.length}</h2>
+            
             {
                 courses.map(course=> <CourseCard
                 key={course._id}

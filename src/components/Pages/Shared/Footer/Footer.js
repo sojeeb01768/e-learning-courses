@@ -1,6 +1,6 @@
 import React from 'react';
 import { FaFacebook, FaInstagram, FaTwitter, FaYoutube } from 'react-icons/fa';
-import { Link } from 'react-router-dom';
+
 
 
 
@@ -20,17 +20,17 @@ const Footer = () =>
                     <ul className="list-unstyled">
 
                         <div>
-                        <span className='m-2'><a href="https://www.facebook.com/"><FaFacebook></FaFacebook></a></span>
-                        <span className='m-2'><a href="https://twitter.com/"><FaTwitter></FaTwitter></a></span>
-                        <span className='m-2'><a href="https://www.instagram.com/"><FaInstagram></FaInstagram></a></span>
-                        <span className='m-2'><a href="https://www.youtube.com/"><FaYoutube></FaYoutube></a></span>
+                            <span className='m-2'><a href="https://www.facebook.com/"><FaFacebook></FaFacebook></a></span>
+                            <span className='m-2'><a href="https://twitter.com/"><FaTwitter></FaTwitter></a></span>
+                            <span className='m-2'><a href="https://www.instagram.com/"><FaInstagram></FaInstagram></a></span>
+                            <span className='m-2'><a href="https://www.youtube.com/"><FaYoutube></FaYoutube></a></span>
                         </div>
                     </ul>
                 </div>
             </div>
         </div>
 
-        <div className="footer-copyright text-center py-3">© 2020 Copyright:
+        <div className="footer-copyright text-center py-3">
             <p>Copyright 2022 code scholar</p>
         </div>
 

@@ -4,6 +4,8 @@ const Blog = () => {
     return (
 
         <div className='my-5'>
+
+            <h1 className='text-center fw-bold text-info my-4'>Blog</h1>
             <div className='border m-2 p-2 rounded'>
                 <h4>What is cors</h4>
                 <p>Answer: CORS stands for Cross-Origin Resource Sharing. It allows us to relax the security applied to an API. This is done by bypassing the Access-Control-Allow-Origin headers, which specify which origins can access the API. <br />
