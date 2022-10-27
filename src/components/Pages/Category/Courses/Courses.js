@@ -1,12 +1,12 @@
 import React from 'react';
-import { useLoaderData } from 'react-router-dom';
+import { Link, useLoaderData } from 'react-router-dom';
 import Card from 'react-bootstrap/Card';
 import { FaRegEye, FaStar } from "react-icons/fa";
 
 const Courses = () => {
     const courses = useLoaderData();
     const { name, title, image_url, tutor, total_view, price, details, rating } = courses;
-    console.log(courses);
+    // console.log(courses);
     return (
             <div>
 
@@ -36,9 +36,11 @@ const Courses = () => {
                     <p className='border bg-info text-center py-2 text-light w-25 rounded'>
                         Course Fee: {price} TK
                     </p>
+                    <Link to='/accesscard'>
                     <button className=' bg-info text-light rounded border py-2 fs-5 fw-semibold'>
-                        Puchase Now
+                        Get premium Access
                     </button>
+                    </Link>
                 </div>
             </Card.Body>
         </Card>

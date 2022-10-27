@@ -9,18 +9,28 @@ import Button from 'react-bootstrap/Button';
 import { FaUserAlt } from 'react-icons/fa';
 import { Image } from 'react-bootstrap';
 
+// import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
+// import Tooltip from 'react-bootstrap/Tooltip';
+
 
 
 const Header = () => {
     const { user, logOut } = useContext(AuthContext)
 
-    const handleLogOut =() =>{
+    const handleLogOut = () => {
         logOut()
-        .then(result => {
-            
-        })
-        .catch(error => console.error(error))
+            .then(result => {
+
+            })
+            .catch(error => console.error(error))
     }
+
+
+    // const renderTooltip = (props) => (
+    //     <Tooltip id="button-tooltip" {...props}>
+    //         Simple tooltip
+    //     </Tooltip>
+    // );
 
 
     return (
@@ -50,7 +60,6 @@ const Header = () => {
 
                                     <>
                                         <Link className='text-decoration-none text-light me-2' to='/login'>Login</Link>
-                                        <Link className='text-decoration-none text-light' to='/register'>Register</Link>
                                     </>
                             }
 
@@ -58,8 +67,10 @@ const Header = () => {
                         <Nav.Link>
                             {
                                 user?.photoURL ?
+
+                                    
                                     <Image style={{ height: '40px' }} roundedCircle src={user?.photoURL}></Image>
-                                    : 
+                                    :
                                     <FaUserAlt className='mt-2'></FaUserAlt>
                             }
                         </Nav.Link>

@@ -6,7 +6,9 @@ import Faq from "../../components/Pages/Faq/Faq";
 import Home from "../../components/Pages/Home/Home";
 import Login from "../../components/Pages/Login/Login/Login";
 import Register from "../../components/Pages/Login/Register/Register";
+import PremiumAccesCard from "../../components/PremiumAccesCard/PremiumAccesCard";
 import Main from "../../layout/Main";
+import PrivateRoute from "../PrivateRoute/PrivateRoute";
 
 export const routes = createBrowserRouter([
     {
@@ -43,6 +45,11 @@ export const routes = createBrowserRouter([
             {
                 path:'/faq',
                 element:<Faq></Faq>
+            },
+            {
+                path:'/accesscard',
+                element: <PrivateRoute><PremiumAccesCard></PremiumAccesCard></PrivateRoute>
+
             }
             
         ]
