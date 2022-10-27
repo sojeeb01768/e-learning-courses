@@ -1,70 +1,36 @@
-# Getting Started with Create React App
+<p>Name: SojeeB Islam</p>
+<p>Email: sojeebahmed.sa@gmail.com</p>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<h5>GITHUB SERVER REPO LINK:
+ https://github.com/programming-hero-web-course1/b610-lerning-platform-server-side-sojeeb01768
+</h5>
 
-## Available Scripts
+<h5>GITHUB CLIENT REPO LINK: 
+https://github.com/programming-hero-web-course1/b610-learning-platform-client-side-sojeeb01768#readme
+</h5>
 
-In the project directory, you can run:
+<h5>FireBase Live LINK: 
+https://assignment-10-e-learning.web.app/
+</h5>
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+<p>What actually I used to make this project: <br>
+=> React framework/library. <br>
+=> React Boostrap library for css <br>
+=> Used Github to save code. <br>
+=> Deploy this site on firebase. <br>
+=> Used firebase authentication for login register etc. <br>
+</p>
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<p>What Is the feature of this Project: <br>
+This is actually a online course site. Here you can buy premium courses beginner to advanced. <br>
+=> Firstly  sets some data of some topics for courses (we use loader to load data from server) <br>
+=> I also create a separate server from the help of google firebase <br>
+=> You can choose or select any course that you like. <br>
+=> There will be provided some information about course . <br>
+=> Every course has different price . <br>
+=> you can choose your favourite course and also can buy  <br>
+=> But When you want to buy premium access you have to login otherwise you cannot access this course<br>
+ </p>
